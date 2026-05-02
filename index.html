@@ -3,15 +3,26 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>AI Engineer Portfolio</title>
+    <title>Mutassimal Zeem – Backend & AI Engineer</title>
+    <!-- Fonts and icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Inter:wght@400;500;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-U81mUzUPh1zNwChLazodEJQRiYF9Z2hrUDDMcLRYzKExXJqUI8kvE4P9VtpmLREeTlyLk8gTi0dxKgnHAenLrw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Custom styles -->
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <!-- Navigation bar -->
     <header class="navbar">
-      <div class="logo">AI Engineer</div>
-      <nav>
+      <div class="logo">
+        <span class="logo-accent">Zeem</span>
+      </div>
+      <nav class="nav-links">
         <a href="#about">About</a>
         <a href="#skills">Skills</a>
+        <a href="#education">Education</a>
+        <a href="#experience">Experience</a>
         <a href="#projects">Projects</a>
         <a href="#contact">Contact</a>
       </nav>
@@ -20,89 +31,257 @@
     <!-- Hero Section -->
     <section class="hero">
       <div class="hero-content">
-        <p class="small-intro">Hello, I'm</p>
-        <h1 class="name">Your Name</h1>
-        <h2 class="title">AI Engineer &amp; Developer</h2>
-        <p class="description">
-          I build intelligent systems that bridge the gap between data and
-          innovation. Passionate about machine learning, deep learning and
-          solving real‑world problems with technology.
-        </p>
-        <a href="#projects" class="cta">View My Work</a>
+        <div class="hero-text">
+          <p class="hero-intro">Hello, I'm</p>
+          <h1 class="hero-name">Mutassimal Al Shahriar Zeem</h1>
+          <h2 class="hero-title">Backend &amp; AI Engineer</h2>
+          <p class="hero-description">
+            Engineering student and problem solver who loves building robust backend systems and intelligent applications. I turn complex ideas into scalable solutions using Python, FastAPI and machine learning.
+          </p>
+          <div class="hero-buttons">
+            <a href="#projects" class="btn btn-primary">View Projects</a>
+            <a href="resume.pdf" target="_blank" class="btn btn-secondary">View Resume</a>
+          </div>
+        </div>
+        <div class="hero-image">
+          <!-- Placeholder image file included in repository -->
+          <img src="hero.png" alt="Portrait of Mutassimal Zeem" />
+        </div>
       </div>
     </section>
 
     <!-- About Section -->
     <section id="about" class="section about">
-      <h2>About Me</h2>
+      <h2>About Me</h2>
       <p>
-        I'm an AI engineer with experience in building scalable machine learning
-        pipelines, designing intelligent models and crafting beautiful web
-        experiences. With a background in computer science and a passion for
-        research, I've contributed to several open‑source projects and
-        prototypes that push the boundaries of what's possible with AI.
+        I'm an engineering student focused on backend engineering, system design and AI integration. I build real‑world applications using Python, FastAPI and PostgreSQL while exploring machine learning, computer vision and natural language processing. My goal is to transform ideas into clean, maintainable and scalable systems that make a difference.
       </p>
+      <div class="stats-grid">
+        <div class="stat-card">
+          <h3>3+</h3>
+          <p>Years of experience</p>
+        </div>
+        <div class="stat-card">
+          <h3>8+</h3>
+          <p>Projects completed</p>
+        </div>
+        <div class="stat-card">
+          <h3>50+</h3>
+          <p>Design clients served</p>
+        </div>
+        <div class="stat-card">
+          <h3>4</h3>
+          <p>Languages spoken</p>
+        </div>
+      </div>
     </section>
 
     <!-- Skills Section -->
     <section id="skills" class="section skills">
       <h2>Skills</h2>
-      <div class="skill-grid">
-        <div class="skill">Python</div>
-        <div class="skill">TensorFlow</div>
-        <div class="skill">PyTorch</div>
-        <div class="skill">Scikit‑learn</div>
-        <div class="skill">NLP</div>
-        <div class="skill">Computer Vision</div>
-        <div class="skill">Data Engineering</div>
-        <div class="skill">React & Next.js</div>
-        <div class="skill">Docker</div>
+      <div class="skills-categories">
+        <div class="skills-category">
+          <h3>Programming &amp; Core</h3>
+          <ul>
+            <li>Python</li>
+            <li>C</li>
+            <li>SQL</li>
+            <li>Data Structures &amp; Algorithms</li>
+          </ul>
+        </div>
+        <div class="skills-category">
+          <h3>Backend &amp; DevOps</h3>
+          <ul>
+            <li>FastAPI</li>
+            <li>PostgreSQL</li>
+            <li>REST / JWT</li>
+            <li>Docker &amp; Linux</li>
+            <li>Git / GitHub</li>
+          </ul>
+        </div>
+        <div class="skills-category">
+          <h3>Machine Learning &amp; Data</h3>
+          <ul>
+            <li>Pandas &amp; NumPy</li>
+            <li>scikit‑learn</li>
+            <li>TensorFlow &amp; PyTorch</li>
+            <li>LangChain &amp; FAISS</li>
+            <li>Computer Vision &amp; NLP</li>
+          </ul>
+        </div>
+        <div class="skills-category">
+          <h3>Frontend &amp; Apps</h3>
+          <ul>
+            <li>HTML &amp; CSS</li>
+            <li>JavaScript &amp; React</li>
+            <li>Tailwind CSS</li>
+            <li>PyQt5</li>
+          </ul>
+        </div>
+        <div class="skills-category">
+          <h3>Tools &amp; Design</h3>
+          <ul>
+            <li>VS Code &amp; Postman</li>
+            <li>Markdown &amp; LaTeX</li>
+            <li>Adobe Illustrator &amp; Photoshop</li>
+            <li>Figma &amp; Canva</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="section education">
+      <h2>Education</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <span class="timeline-dot"></span>
+          <div class="timeline-content">
+            <h3>BSc in Electrical &amp; Electronics Engineering</h3>
+            <p class="timeline-location">Islamic University of Technology, Bangladesh</p>
+            <p class="timeline-date">2022 – Present (expected 2028)</p>
+            <p class="timeline-desc">Pursuing an engineering degree that strengthens my foundations in mathematics, signal processing, embedded systems and computer architecture while allowing me to apply AI and machine learning across interdisciplinary projects.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <span class="timeline-dot"></span>
+          <div class="timeline-content">
+            <h3>Higher Secondary Certificate (Science)</h3>
+            <p class="timeline-location">Notre Dame College, Dhaka</p>
+            <p class="timeline-date">2020 – 2022</p>
+            <p class="timeline-desc">Completed pre‑university studies with a perfect GPA (5.00/5.00), focusing on physics, chemistry, mathematics and problem solving.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section experience">
+      <h2>Experience</h2>
+      <div class="experience-grid">
+        <div class="experience-card">
+          <h3>Backend &amp; AI Engineer</h3>
+          <p class="experience-date">2023 – Present</p>
+          <p>
+            Designing APIs, databases and data pipelines using FastAPI and PostgreSQL. Integrating machine learning models into production systems and exploring ways to bring AI closer to users through scalable cloud‑native architectures.
+          </p>
+        </div>
+        <div class="experience-card">
+          <h3>Freelance Graphic Designer</h3>
+          <p class="experience-date">2018 – 2021</p>
+          <p>
+            Worked with over 50 clients worldwide to create branding materials, logos and UI components using Adobe Illustrator and Photoshop. This experience honed my eye for design and attention to detail which I now apply to technical projects.
+          </p>
+        </div>
       </div>
     </section>
 
     <!-- Projects Section -->
     <section id="projects" class="section projects">
       <h2>Projects</h2>
-      <div class="project-grid">
+      <div class="projects-grid">
+        <!-- Project: EduBridge -->
         <div class="project-card">
-          <h3 class="project-title">AI Chatbot</h3>
+          <h3>EduBridge</h3>
           <p class="project-desc">
-            Built a conversational AI chatbot using transformer models to
-            understand and respond to natural language queries with context
-            awareness.
+            Inclusive educational ecosystem that empowers students with dyslexia and learning disabilities through AI‑driven personalization. Dynamic content adaptation tailors materials to each learner.
           </p>
+          <p class="project-tech"><strong>Tech:</strong> FastAPI, React, PostgreSQL, LangChain</p>
+          <a class="project-link" href="https://github.com/mutassimalzeem/EduBridge" target="_blank" rel="noopener noreferrer">View on GitHub</a>
         </div>
+        <!-- Project: Smart Personal Finance Coach -->
         <div class="project-card">
-          <h3 class="project-title">Image Classifier</h3>
+          <h3>Smart Personal Finance Coach</h3>
           <p class="project-desc">
-            Developed a deep convolutional neural network to classify images
-            across multiple categories, achieving state‑of‑the‑art accuracy on
-            benchmark datasets.
+            Transaction ingestion and Q&amp;A pipeline that helps users understand and improve their finances. Built with FastAPI, React and LangChain, using vector databases for personalized insights.
           </p>
+          <p class="project-tech"><strong>Tech:</strong> FastAPI, React, PostgreSQL, LangChain, FAISS</p>
+          <a class="project-link" href="https://github.com/mutassimalzeem/smart-personal-finance-coach" target="_blank" rel="noopener noreferrer">View on GitHub</a>
         </div>
+        <!-- Project: AI Video Summarizer -->
         <div class="project-card">
-          <h3 class="project-title">Recommendation System</h3>
+          <h3>AI Video Summarizer</h3>
           <p class="project-desc">
-            Implemented a collaborative filtering recommendation system that
-            provides personalized product suggestions based on user behavior.
+            Tool that transcribes and summarises long videos using state‑of‑the‑art NLP models, enabling quick understanding of lengthy content. Features a responsive front‑end for uploading and viewing summaries.
           </p>
+          <p class="project-tech"><strong>Tech:</strong> Python, React, OpenAI API</p>
+          <a class="project-link" href="https://github.com/mutassimalzeem/ai-video-summarizer" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+        </div>
+        <!-- Project: Land Analysis Tool -->
+        <div class="project-card">
+          <h3>Land Analysis Tool</h3>
+          <p class="project-desc">
+            Geospatial analysis platform that provides data‑driven insights for property investment decisions. Harnesses satellite imagery and machine learning to evaluate land features and potential.
+          </p>
+          <p class="project-tech"><strong>Tech:</strong> Python, React, GIS, ML</p>
+          <a class="project-link" href="https://github.com/mutassimalzeem/land-analysis-tool" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+        </div>
+        <!-- Project: FileNest -->
+        <div class="project-card">
+          <h3>FileNest</h3>
+          <p class="project-desc">
+            Knowledge base and Q&amp;A tool that ingests PDFs and other documents and lets users ask questions about their content. Combines FastAPI with vector databases for semantic search.
+          </p>
+          <p class="project-tech"><strong>Tech:</strong> FastAPI, React, Pinecone, OpenAI</p>
+          <a class="project-link" href="https://github.com/mutassimalzeem/FileNest" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+        </div>
+        <!-- Project: PedestrianPro -->
+        <div class="project-card">
+          <h3>PedestrianPro</h3>
+          <p class="project-desc">
+            Real‑time pedestrian detection app built with OpenCV and PyQt5. Uses Python and NumPy to process video streams and improve crosswalk safety.
+          </p>
+          <p class="project-tech"><strong>Tech:</strong> Python, OpenCV, PyQt5, NumPy</p>
+          <a class="project-link" href="#" onclick="alert('This project repository is private or unpublished.')">Coming Soon</a>
+        </div>
+        <!-- Project: Movie Recommender System -->
+        <div class="project-card">
+          <h3>Movie Recommender System</h3>
+          <p class="project-desc">
+            Computes “movie DNA” using NLP techniques and recommends similar films based on user preferences. Served via a FastAPI back‑end for easy integration.
+          </p>
+          <p class="project-tech"><strong>Tech:</strong> Python, Pandas, scikit‑learn, FastAPI</p>
+          <a class="project-link" href="#" onclick="alert('This project repository is private or unpublished.')">Coming Soon</a>
         </div>
       </div>
     </section>
 
     <!-- Contact Section -->
     <section id="contact" class="section contact">
-      <h2>Get In Touch</h2>
-      <p>
-        I'm currently open to new opportunities and collaborations. Whether
-        you have a question, an idea or just want to say hello, feel free to
-        reach out!
-      </p>
-      <a class="email-link" href="mailto:email@example.com">Send me an email</a>
+      <h2>Contact</h2>
+      <p>I'm currently open to new opportunities and collaborations. Feel free to reach out if you have an idea or just want to say hello!</p>
+      <div class="contact-grid">
+        <div class="contact-item">
+          <i class="fa-solid fa-location-dot"></i>
+          <span>Rupnagar, Mirpur, Dhaka, Bangladesh</span>
+        </div>
+        <div class="contact-item">
+          <i class="fa-solid fa-envelope"></i>
+          <a href="mailto:mutassimalshahriar@gmail.com">mutassimalshahriar@gmail.com</a>
+        </div>
+        <div class="contact-item">
+          <i class="fa-solid fa-phone"></i>
+          <a href="tel:+8801995901858">+880 199 590 1858</a>
+        </div>
+        <div class="contact-item">
+          <i class="fa-brands fa-github"></i>
+          <a href="https://github.com/mutassimalzeem" target="_blank" rel="noopener noreferrer">GitHub Profile</a>
+        </div>
+        <div class="contact-item">
+          <i class="fa-brands fa-linkedin"></i>
+          <a href="https://www.linkedin.com/in/mutassimalzeem" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        </div>
+      </div>
     </section>
 
+    <!-- Footer -->
     <footer class="footer">
-      <p>&copy; 2026 AI Engineer Portfolio. All rights reserved.</p>
+      <p>&copy; <span id="year"></span> Mutassimal Zeem. All rights reserved.</p>
     </footer>
+
+    <script>
+      // Update copyright year dynamically
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
   </body>
 </html>
