@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Point crawlers to the sitemap to improve discovery
+Sitemap: https://mutassimalzeem.vercel.app/sitemap.xml
