@@ -1,5 +1,5 @@
 User-agent: *
 Allow: /
 
-# Point crawlers to the sitemap to improve discovery
+# Point crawlers to the sitemap to improve discovery - SEO Optimization
 Sitemap: https://mutassimalzeem.vercel.app/sitemap.xml
