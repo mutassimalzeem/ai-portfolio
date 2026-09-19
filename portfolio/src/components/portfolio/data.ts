@@ -11,7 +11,7 @@ export const PROFILE = {
   phone: "+880 199 590 1858",
   phoneHref: "+8801995901858",
   github: "https://github.com/mutassimalzeem",
-  linkedin: "https://www.linkedin.com/in/mutassimalzeem",
+  linkedin: "https://www.linkedin.com/in/mutassimalzeem/",
   resume: "/resume.pdf",
   photo: "/zeem.jpg",
   availability: "Open to freelance & remote work",
