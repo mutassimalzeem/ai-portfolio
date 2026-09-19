@@ -4,12 +4,6 @@ import { db } from "@/lib/db";
 
 const recipient = "mutassimalshahriar@gmail.com";
 
-function createMailto(name: string, email: string, subject: string | undefined, message: string) {
-  const body = [`From: ${name} <${email}>`, "", message].join("\n");
-  const params = new URLSearchParams({ subject: subject || "Portfolio contact", body });
-  return `mailto:${recipient}?${params.toString()}`;
-}
-
 const contactSchema = z.object({
   name: z.string().trim().min(2, "Please tell me your name").max(80),
   email: z.string().trim().email("That email doesn't look right").max(120),
@@ -35,23 +29,43 @@ export async function POST(req: NextRequest) {
     }
 
     const { name, email, subject, message } = parsed.data;
+    const apiKey = process.env.RESEND_API_KEY;
 
-    if (!process.env.DATABASE_URL) {
-      return NextResponse.json({
-        ok: true,
-        fallback: "mailto",
-        href: createMailto(name, email, subject, message),
-      });
+    if (!apiKey) {
+      return NextResponse.json(
+        { ok: false, error: "Contact delivery is not configured yet." },
+        { status: 503 }
+      );
     }
 
-    await db.contactMessage.create({
-      data: {
-        name,
-        email,
-        subject: subject || null,
-        message,
+    const emailResponse = await fetch("https://api.resend.com/emails", {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${apiKey}`,
+        "Content-Type": "application/json",
       },
+      body: JSON.stringify({
+        from: process.env.RESEND_FROM_EMAIL || "onboarding@resend.dev",
+        to: [recipient],
+        reply_to: email,
+        subject: subject || `Portfolio message from ${name}`,
+        text: [`Name: ${name}`, `Email: ${email}`, "", message].join("\n"),
+      }),
     });
+
+    if (!emailResponse.ok) {
+      console.error("[contact] email provider failed:", await emailResponse.text());
+      return NextResponse.json(
+        { ok: false, error: "The message could not be delivered. Please try again shortly." },
+        { status: 502 }
+      );
+    }
+
+    if (process.env.DATABASE_URL) {
+      await db.contactMessage.create({
+        data: { name, email, subject: subject || null, message },
+      });
+    }
 
     return NextResponse.json({ ok: true });
   } catch (err) {
