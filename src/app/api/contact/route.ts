@@ -2,6 +2,14 @@ import { NextRequest, NextResponse } from "next/server";
 import { z } from "zod";
 import { db } from "@/lib/db";
 
+const recipient = "mutassimalshahriar@gmail.com";
+
+function createMailto(name: string, email: string, subject: string | undefined, message: string) {
+  const body = [`From: ${name} <${email}>`, "", message].join("\n");
+  const params = new URLSearchParams({ subject: subject || "Portfolio contact", body });
+  return `mailto:${recipient}?${params.toString()}`;
+}
+
 const contactSchema = z.object({
   name: z.string().trim().min(2, "Please tell me your name").max(80),
   email: z.string().trim().email("That email doesn't look right").max(120),
@@ -27,6 +35,14 @@ export async function POST(req: NextRequest) {
     }
 
     const { name, email, subject, message } = parsed.data;
+
+    if (!process.env.DATABASE_URL) {
+      return NextResponse.json({
+        ok: true,
+        fallback: "mailto",
+        href: createMailto(name, email, subject, message),
+      });
+    }
 
     await db.contactMessage.create({
       data: {

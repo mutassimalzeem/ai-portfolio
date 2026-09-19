@@ -77,6 +77,14 @@ export function Contact() {
       });
       const data = await res.json();
       if (!res.ok || !data.ok) throw new Error(data.error || "Something went wrong");
+      if (data.fallback === "mailto" && data.href) {
+        window.location.href = data.href;
+        toast({
+          title: "Opening your email app",
+          description: "Your message is ready to send.",
+        });
+        return;
+      }
       setSent(true);
       setForm({ name: "", email: "", subject: "", message: "" });
       toast({
