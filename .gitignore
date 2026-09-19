@@ -52,8 +52,3 @@ prompt
 server.log
 # Skills directory
 /skills/
-
-# local source archive and visual verification exports
-workspace-*.tar
-/verify-*.png
-/creative-*.png
