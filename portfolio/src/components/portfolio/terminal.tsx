@@ -77,7 +77,7 @@ function runCommand(raw: string, toggleTheme: () => void): Line[] {
         { kind: "out", text: `email  → ${PROFILE.email}` },
         { kind: "out", text: `phone  → ${PROFILE.phone}` },
         { kind: "link", text: "github → github.com/mutassimalzeem", href: PROFILE.github },
-        { kind: "link", text: "linkedin → linkedin.com/in/mutassimalshahriar", href: PROFILE.linkedin },
+        { kind: "link", text: "linkedin → linkedin.com/in/mutassimalzeem", href: PROFILE.linkedin },
       ];
     case "resume":
       window.open(PROFILE.resume, "_blank", "noopener");
@@ -85,7 +85,7 @@ function runCommand(raw: string, toggleTheme: () => void): Line[] {
     case "social":
       return [
         { kind: "link", text: "github   github.com/mutassimalzeem", href: PROFILE.github },
-        { kind: "link", text: "linkedin linkedin.com/in/mutassimalshahriar", href: PROFILE.linkedin },
+        { kind: "link", text: "linkedin linkedin.com/in/mutassimalzeem", href: PROFILE.linkedin },
       ];
     case "theme":
       toggleTheme();
